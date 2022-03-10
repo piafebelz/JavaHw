@@ -1,0 +1,55 @@
+import java.lang.Comparable;
+public class Person implements Comparable<Person>
+{
+    private String name;
+    
+    /**
+     * Constructor for objects of class Person
+     * @param  name  the name of the person  
+     */
+    public Person(String name)
+    {
+       this.name = name;
+    }
+
+    /**
+     * This function sets the name of the person
+     * @param  name  the name of the person
+     */
+    public void setName(String name)
+    {
+       this.name = name;
+    }
+    
+    /**
+     * This function returns the name of the person
+     * @return name  the name of the person
+     */
+    public String getName()
+    {
+        return name;
+    }
+    
+    /**
+     * This function introduces the name of the person in String form
+     * @return text  returns the text  (”His/her name is”+ this.name +”.”)
+     */
+    public String toString()
+    {
+        String text = "His/her name is " + this.name + "." ;
+        System.out.println();
+        return text;
+    } 
+    
+    /**
+     * This function overrides compareTo method and compares person's names lexicographically
+     *
+     * @param  otherPerson  the person which will be compared with the given person
+     * @return   0 if the names are the same , a value less than 0 if the string is less than the other string and a value greater than 0 if the string is greater than the other string (lexicographically).
+     */
+    public int compareTo(Person otherPerson)
+    {
+      return name.compareTo(otherPerson.getName());
+    }
+}
+    
