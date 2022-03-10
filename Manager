@@ -1,0 +1,44 @@
+public class Manager extends Employee
+{
+    private String department;
+
+    /**
+     * Constructor for objects of class Manager
+     * @param  name  the name of the manager 
+     * @param  salary  the salary of the manager 
+     * @param  department  the department of the manager person
+     */
+    public Manager(String name, int salary, String department)
+    {
+        super(name,salary);
+        this.department = department;
+    }
+
+    /**
+     * This function sets the department of the manager
+     * @param  department  the department of the manager
+     */
+    public void setDepartment(String department)
+    {
+       this.department = department;
+    }
+    
+    /**
+     * This function returns the department of the manager
+     * @return    the department of the manager
+     */
+    public String getDepartment()
+    {
+        return department;
+    }
+    
+    /**
+     * This function returns the department of the person in addition with its parent class in String form
+     * @return    name, salary and department of the manager
+     */
+    public String toString()
+    {
+        setDepartment(department);
+        return super.toString() + "\nHis/her department is " + this.department + "." ;
+    }
+}
