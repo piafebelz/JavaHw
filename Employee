@@ -1,0 +1,42 @@
+public class Employee extends Person
+{
+    private int salary;
+    
+    /**
+     * Constructor for objects of class Employee
+     * @param  name  the name of the employee
+     * @param  salary  the salary of the employee
+     */
+    public Employee(String name, int salary)
+    {
+        super(name);
+        this.salary = salary;
+    }
+
+    /**
+     * This function sets the salary of the employee
+     * @param  salary  the salary of the employee
+     */
+    public void setSalary(int salary)
+    {
+        this.salary = salary;
+    }
+    
+    /**
+     * This function returns the salary of the employee
+     * @return    the salary of the employee
+     */
+    public int getSalary()
+    {
+        return salary;
+    }
+    
+    /**
+     * This function returns the name and salary of the employee
+     * @return    the name and salary of the employee
+     */
+    public String toString()
+    {
+        return super.toString() + "\nHe/She gets " + this.salary + " salary." ;
+    }
+}
