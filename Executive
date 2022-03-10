@@ -1,0 +1,26 @@
+public class Executive extends Manager
+{
+    private String regionCode;
+
+    /**
+     * Constructor for objects of class Executive
+     * @param  name  the name of the executive 
+     * @param  salary  the salary of the executive 
+     * @param  department  the department of the executive
+     * @param  regionCode  the region code of the executive 
+     */
+    public Executive(String name, int salary, String department, String regionCode)
+    {
+        super(name,salary,department);
+        this.regionCode = regionCode;
+    }
+
+    /**
+     * This function returns the region code of the person in addition with its parent class in String form
+     * @return    name , salary, department and region code of the executive
+     */
+    public String toString()
+    {
+        return super.toString() + "\nHis/her region code is " + this.regionCode + ".\n" ;
+    }
+}
