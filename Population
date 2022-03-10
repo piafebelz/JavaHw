@@ -1,0 +1,80 @@
+import java.util.ArrayList;
+public class Population
+{
+    private ArrayList<Person> people = new ArrayList<Person>();
+    private int order;
+
+    /**
+     * Constructor for objects of class Population
+     */
+    public Population()
+    {
+        this.order = 0;
+    }
+
+    /**
+     * This function adds a person to the ArrayList
+     * @param  person  Person parameter which is added to the ArrayList
+     */
+    public void addPerson(Person person)
+    {
+        people.add(person);
+    }
+    
+    /**
+     * This function increases the order variable by 1.
+     */
+    public void increaseOrder()
+    {
+        order = order + 1;
+    }
+    
+    /**
+     * This function returns the private variable order.
+     * @return order  the variable used for ArrayList's order
+     */
+    public int getOrder()
+    {
+        return order;
+    }
+    
+    /**
+     * This function returns the person at the given order.
+     * @param order  order of the person in the ArrayList
+     * @return people.get(order)  returns the person with the given order
+     */
+    public Person getPersonByOrder(int order)
+    {
+       return people.get(order);
+    }
+    
+    /**
+     * This function returns the person who has the given name.
+     * @param name  name of a person in Person class
+     * @return persona  the person with the given name
+     */
+    public Person getPersonByName(String name)
+    {
+           Person persona = new Person(name);
+           for (Person person : people) 
+               {
+               if(person.compareTo(persona) == 0){
+                 persona = person;
+               }
+               else
+               { 
+                  Person wrongPerson = new Person("you gave wrong name");
+                  persona = wrongPerson;
+                }
+               }
+           return persona;
+    }
+    
+    /**
+     * This function sorts the persons in the people ArrayList according their names lexicographically.
+     */
+    public void sortByName()
+    {
+        people.sort(null);
+    }
+}
